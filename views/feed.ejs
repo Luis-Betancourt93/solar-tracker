@@ -1,15 +1,26 @@
 <%- include('partials/header') -%>
-  <div class="container">
-    <div class="row justify-content-center mt-5">
-      <ul class="row list-unstyled">
+  
+
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+
+    <div class="">
+      <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">All Completed Homes</h2>
+    </div>
+
+      <ul class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 md:gap-6 xl:gap-8">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
+          <li class="">
+            <a href="/post/<%= posts[i]._id%>" class="group h-48 md:h-96 flex justify-center items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+              <img class=" " src="<%= posts[i].image%>">
             </a>
           </li>
         <% } %>
         </ul>
-    </div>
-  </div>  
+  </div>
+</div> 
+
+
+
 <%- include('partials/footer') -%>
