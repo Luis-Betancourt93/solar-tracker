@@ -13,12 +13,16 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  caption: {
+  notes: {
     type: String,
     required: true,
   },
-  likes: {
+  phase: {
     type: Number,
+    required: true,
+  },
+  lot: {
+    type: Number, 
     required: true,
   },
   user: {
