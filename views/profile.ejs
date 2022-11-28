@@ -10,7 +10,6 @@
           <div class="mt-5">
             <h2>House Completed</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-
               <div class="mb-3">
                 <label for="title" class="form-label">System</label>
                 <select class="form-select" aria-label="Default select example" id="title" name="title">
@@ -20,19 +19,32 @@
                   <option value="Tesla">Tesla</option>
                 </select>
               </div>
-              
-              <!-- <div class="mb-3">
-                  <label for="title" class="form-label">System</label>
-                  <input type="text" class="form-control" id="title" name="title">
-              </div> -->
-              <!--  -->
               <div class="mb-3">
                 <label for="phase" class="form-label">Phase</label>
-                <input type="text" class="form-control" id="phase" name="phase">
+                <select class="form-select" aria-label="Default select example" id="phase" name="phase">
+                  <option selected>Please Select a Phase</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="lot" class="form-label">Lot</label>
-                <input type="text" class="form-control" id="lot" name="lot">
+                <select class="form-select" aria-label="Default select example" id="lot" name="lot">
+                  <option selected>Please Select a Lot</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="notes" class="form-label">Notes</label>
