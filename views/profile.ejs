@@ -10,18 +10,30 @@
           <div class="mt-5">
             <h2>House Completed</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+
               <div class="mb-3">
+                <label for="title" class="form-label">System</label>
+                <select class="form-select" aria-label="Default select example" id="title" name="title">
+                  <option selected>Please Select a System</option>
+                  <option value="Solar Edge">Solar Edge</option>
+                  <option value="End Phase">End Phase</option>
+                  <option value="Tesla">Tesla</option>
+                </select>
+              </div>
+              
+              <!-- <div class="mb-3">
                   <label for="title" class="form-label">System</label>
                   <input type="text" class="form-control" id="title" name="title">
-              </div>
+              </div> -->
+              <!--  -->
               <div class="mb-3">
                 <label for="phase" class="form-label">Phase</label>
                 <input type="text" class="form-control" id="phase" name="phase">
-            </div>
-            <div class="mb-3">
-              <label for="lot" class="form-label">Lot</label>
-              <input type="text" class="form-control" id="lot" name="lot">
-          </div>
+              </div>
+              <div class="mb-3">
+                <label for="lot" class="form-label">Lot</label>
+                <input type="text" class="form-control" id="lot" name="lot">
+              </div>
               <div class="mb-3">
                 <label for="notes" class="form-label">Notes</label>
                 <textarea class="form-control" id="notes" name="notes"></textarea>
