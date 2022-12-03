@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./views/**/*.ejs/'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'solar': '#f47d20'
+      }
+    },
   },
   plugins: [],
 }
