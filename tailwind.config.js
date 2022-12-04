@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'solar': '#f47d20'
+        'solar': '#f47d20',
+        'solarText': '#FFB26B',
       }
     },
   },

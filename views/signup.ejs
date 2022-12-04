@@ -1,7 +1,7 @@
 
 <%- include('partials/header') -%>
 
-<section class="col-6 mt-5">
+<section class="">
   <% if (locals.messages.errors) { %>
       <% messages.errors.forEach( el => { %>
           <div class="alert alert-danger"><%= el.msg %></div>
@@ -43,7 +43,7 @@
           <button type="submit" class="block bg-solar hover:bg-orange-400 active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Submit</button>
 
         </div>
-        
+
       </form>
     </div>
   </div>   
