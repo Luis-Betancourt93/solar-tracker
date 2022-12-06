@@ -2,20 +2,21 @@
 
 <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
   <div class="">
-      <div class="flex justify-around flex-wrap">
-          <div class=" inline-block  rounded relative w-64">
-              <p><strong>User Name</strong>: </p>
-              <div><%= user.userName %></div>
+    
+      <div class=" flex md:justify-around justify-center  flex-wrap ">
+          <div class="   rounded relative w-64 ">
+              <p><strong>User Name</strong>: </p> <%= user.userName %>
               <p><strong>Email</strong>:</p>
                 <div><%= user.email %></div> 
-              <div class="flex items-center justify-center w-full bg-solar rounded absolute inset-x-0 bottom-0 h-12">
+              <div class="flex items-center justify-center w-full bg-solar rounded  inset-x-0 bottom-0 h-8 md:h-12 md:absolute">
                 <a href="/logout" class="  ">Logout</a>
               </div>
           </div>
 
           <div class="">
-            <h2 class=" text-center pb-4 font-bold text-lg">House Completed</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <h2 class=" text-center py-4 sm:pt-0 font-bold text-lg">House Completed</h2>
+            
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST" class="@screen max-md:text-center">
               <div class="">
                 <label for="title" class=" text-solar font-bold">System:</label>
                 <br>
@@ -61,11 +62,14 @@
                 
               </div>
               <div class="mb-3">
-                <label for="imgUpload" class="text-solar font-bold">Image:</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
+                <label for="imgUpload" class="text-solar font-bold text-center">Image:</label>
+                <div class="">
+                  <input type="file" class="ml-20 md:ml-0" id="imageUpload" name="file" >
+                </div>
               </div>
-              <button type="submit" class="bg-green-400 w-full h-12 rounded" value="Upload">Submit</button>
+              <button type="submit" class="bg-green-400 w-64 h-12 rounded" value="Upload">Submit</button>
             </form>
+          
           </div>
       </div>
       <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
@@ -88,7 +92,7 @@
             <!-- product - start -->
             <div class=" ">
               <ul class="flex justify-around flex-wrap  ">
-                <% for(var i=0; i<posts.length; i++) {%>
+                <% for(var i=0; i < 3; i++) {%>
                   <li class="shadow-2xl">
                     <a href="/post/<%= posts[i]._id%>" class="group h-96 w-96 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
                       <img src="<%= posts[i].image%>" loading="lazy" alt="" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />                                 
