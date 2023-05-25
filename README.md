@@ -17,4 +17,5 @@
 
 # Run
 
-`npm start`
+`"npm start"  to start application`
+` "npm run dev"  to start tailwind`
