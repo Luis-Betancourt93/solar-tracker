@@ -2,149 +2,149 @@
 
 <%- include('partials/header') -%>
 
-<div class="md:h-screen  bg-[url('../../imgs/back.png')] bg-auto bg-center">
+<div class="md:h-screen  bg-[url('../../imgs/background.png')] bg-auto bg-center">
  
 
-<div class="max-w-screen-2xl px-4 md:px-8 mx-auto ">
-  <div class=" bg-gray-500 bg-opacity-70 md:h-screen text-white">
-    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-      <h1 class=" underline pt-4 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-8 hover:text-orange-500"><a href="/profile">Solar System Tracker</a></h1>
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto ">
+    <div class=" bg-gray-500 bg-opacity-70 md:h-screen text-white">
+      <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+        <h1 class=" underline pt-4 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-8 hover:text-orange-500"><a href="/profile">Solar System Tracker</a></h1>
+        
+      </div>
       
-    </div>
-    
-      <div class=" flex md:justify-around justify-center  flex-wrap  ">
-          <div class="   rounded relative w-80 ">
-            <div class="flex flex-col items-center justify-center pt-12">
-              
-              <p><strong>User Name</strong>: <%= user.userName %> </p> 
-              <p><strong>Email</strong>: <%= user.email %> </p>
-              
-              
-              
-            </div>
-              
-              <div class=" flex items-center justify-center w-full bg-blue-400 rounded  inset-x-0 bottom-0 h-8 md:h-12 md:absolute hover:bg-orange-600">
-                <a href="/logout" class="  ">Logout</a>
-              </div>
-          </div>
-
-          <div class="">
-            <h2 class="underline text-center py-4 sm:pt-0 font-bold text-lg">House Completed</h2>
-            
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST" class="@screen max-md:text-center">
-              <div class="">
-                <label for="title" class="  font-bold">System:</label>
-                <br>
-                <select class="text-black bg-orange-300 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" aria-label="Default select example" id="title" name="title">
-                  <option selected>Please Select a System</option>
-                  <option value="Solar Edge">Solar Edge</option>
-                  <option value="End Phase">End Phase</option>
-                  <option value="Tesla">Tesla</option>
-                </select>
-              </div>
-              <div class="">
-                <label for="phase" class=" font-bold">Phase:</label>
-                <br>
-                <select class=" text-black bg-orange-300 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" aria-label="Default select example" aria-label="Default select example" id="phase" name="phase">
-                  <option selected>Please Select a Phase</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-              <div class="">
-                <label for="lot" class=" font-bold">Lot:</label>
-                <br>
-                <select class=" text-black bg-orange-300 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" aria-label="Default select example" aria-label="Default select example" id="lot" name="lot">
-                  <option selected>Please Select a Lot</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="notes" class=" font-bold ">Notes:</label>
-                <div><textarea class="bg-slate-200" id="notes" name="notes"></textarea></div>
+        <div class=" flex md:justify-around justify-center  flex-wrap  ">
+            <div class="   rounded relative w-80 ">
+              <div class="flex flex-col items-center justify-center pt-12">
+                
+                <p><strong>User Name</strong>: <%= user.userName %> </p> 
+                <p><strong>Email</strong>: <%= user.email %> </p>
+                
+                
                 
               </div>
-              <div class="mb-3">
-                <label for="imgUpload" class=" font-bold text-center">Image:</label>
-                <div class="">
-                  <input type="file" class="ml-20 md:ml-0" id="imageUpload" name="file" >
+                
+                <div class=" flex items-center justify-center w-full bg-blue-400 rounded  inset-x-0 bottom-0 h-8 md:h-12 md:absolute hover:bg-orange-600">
+                  <a href="/logout" class="  ">Logout</a>
                 </div>
-              </div>
-              <button type="submit" class="bg-green-400 w-64 h-12 rounded hover:bg-green-500" value="Upload">Submit</button>
-            </form>
-          
-          </div>
-      </div>
-      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-
-
-      <div class="">
-        <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-          <!-- text - start -->
-          <div class="mb-10 md:mb-16">
-            <div class="flex items-center justify-between px-4 py-3 ">
-              <h2 class=" underline ml-16 flex-grow  text-2xl lg:text-3xl font-bold text-center  ">Recents</h2>
-              <a class="bg-orange-300 hover:bg-orange-500 focus:ring-4 text-black focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" href="/feed">All Post</a>
             </div>
-            
-            
-          </div>
-          <!-- text - end -->
-      
-          <div class=" ">
-            <!-- product - start -->
-            <div class=" ">
-              <ul class="flex justify-around flex-wrap  ">
-                <% for(var i=0; i < 3; i++) {%>
-                  <li class="shadow-2xl">
-                    <a href="/post/<%= posts[i]._id%>" class="group h-60 w-60 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
-                      <img src="<%= posts[i].image%>" loading="lazy" alt="" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />                                 
-                    </a>
-                  </li>
-                <% } %>
-              </ul>
-            </div>
-            <!-- product - end -->
-          </div>
 
+            <div class="">
+              <h2 class="underline text-center py-4 sm:pt-0 font-bold text-lg">House Completed</h2>
+              
+              <form action="/post/createPost" enctype="multipart/form-data" method="POST" class="@screen max-md:text-center">
+                <div class="">
+                  <label for="title" class="  font-bold">System:</label>
+                  <br>
+                  <select class="text-black bg-orange-300 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" aria-label="Default select example" id="title" name="title">
+                    <option selected>Please Select a System</option>
+                    <option value="Solar Edge">Solar Edge</option>
+                    <option value="End Phase">End Phase</option>
+                    <option value="Tesla">Tesla</option>
+                  </select>
+                </div>
+                <div class="">
+                  <label for="phase" class=" font-bold">Phase:</label>
+                  <br>
+                  <select class=" text-black bg-orange-300 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" aria-label="Default select example" aria-label="Default select example" id="phase" name="phase">
+                    <option selected>Please Select a Phase</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+                <div class="">
+                  <label for="lot" class=" font-bold">Lot:</label>
+                  <br>
+                  <select class=" text-black bg-orange-300 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" aria-label="Default select example" aria-label="Default select example" id="lot" name="lot">
+                    <option selected>Please Select a Lot</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="notes" class=" font-bold ">Notes:</label>
+                  <div><textarea class="bg-slate-200" id="notes" name="notes"></textarea></div>
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="imgUpload" class=" font-bold text-center">Image:</label>
+                  <div class="">
+                    <input type="file" class="ml-20 md:ml-0" id="imageUpload" name="file" >
+                  </div>
+                </div>
+                <button type="submit" class="bg-green-400 w-64 h-12 rounded hover:bg-green-500" value="Upload">Submit</button>
+              </form>
+            
+            </div>
         </div>
-      </div>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
 
-    
+
+        <div class="">
+          <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+            <!-- text - start -->
+            <div class="mb-10 md:mb-16">
+              <div class="flex items-center justify-between px-4 py-3 ">
+                <h2 class=" underline ml-16 flex-grow  text-2xl lg:text-3xl font-bold text-center  ">Recents</h2>
+                <a class="bg-orange-300 hover:bg-orange-500 focus:ring-4 text-black focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-1 text-center inline-flex items-centerdark:focus:ring-blue-800" href="/feed">All Post</a>
+              </div>
+              
+              
+            </div>
+            <!-- text - end -->
+        
+            <div class=" ">
+              <!-- product - start -->
+              <div class=" ">
+                <ul class="flex justify-around flex-wrap  ">
+                  <% for(var i=0; i < 3; i++) {%>
+                    <li class="shadow-2xl">
+                      <a href="/post/<%= posts[i]._id%>" class="group h-60 w-60 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
+                        <img src="<%= posts[i].image%>" loading="lazy" alt="" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />                                 
+                      </a>
+                    </li>
+                  <% } %>
+                </ul>
+              </div>
+              <!-- product - end -->
+            </div>
+
+          </div>
+        </div>
+
       
+        
 
 
-      <!-- <div class="col-6">
-        <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">All Post</a>
-        </div>  
-      </div>   -->
+        <!-- <div class="col-6">
+          <ul class="row list-unstyled">
+          <% for(var i=0; i<posts.length; i++) {%>
+            <li class="col-6 justify-content-between mt-5">
+              <a href="/post/<%= posts[i]._id%>">
+                <img class="img-fluid" src="<%= posts[i].image%>">
+              </a>
+            </li>
+          <% } %>
+          </ul>
+          <div class="row justify-content-center mt-5">
+            <a class="btn btn-primary" href="/feed">All Post</a>
+          </div>  
+        </div>   -->
 
 
 
+      </div>
     </div>
-  </div>
 </div>
 
 
