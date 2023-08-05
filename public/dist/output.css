@@ -784,8 +784,12 @@ video {
   --tw-bg-opacity: 0.7;
 }
 
-.bg-\[url\(\'\.\.\/\.\.\/imgs\/background\.png\'\)\] {
-  background-image: url('../../imgs/background.png');
+.bg-\[url\(\'\.\.\/\.\.\/imgs\/background\.jpg\'\)\] {
+  background-image: url('../../imgs/background.jpg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/imgs\/solar\.jpg\'\)\] {
+  background-image: url('../../imgs/solar.jpg');
 }
 
 .bg-\[url\(\'\.\.\/\.\.\/imgs\/solar\.png\'\)\] {
