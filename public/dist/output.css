@@ -568,12 +568,24 @@ video {
   margin-top: 1.25rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .block {
   display: block;
 }
 
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -586,6 +598,10 @@ video {
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-12 {
@@ -640,6 +656,11 @@ video {
   width: 100%;
 }
 
+.min-w-max {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -658,6 +679,10 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-1 {
@@ -692,6 +717,10 @@ video {
   justify-content: space-around;
 }
 
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -712,6 +741,14 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.justify-self-auto {
+  justify-self: auto;
+}
+
+.justify-self-center {
+  justify-self: center;
 }
 
 .overflow-hidden {
@@ -989,6 +1026,10 @@ video {
 
 .duration-200 {
   transition-duration: 200ms;
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }
 
 .hover\:bg-green-500:hover {

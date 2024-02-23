@@ -31,7 +31,7 @@
             <div class="">
               <h2 class="underline text-center py-4 sm:pt-0 font-bold text-lg">House Completed</h2>
               
-              <form action="/post/createPost" enctype="multipart/form-data" method="POST" class="@screen max-md:text-center ">
+              <form action="/post/createPost" enctype="multipart/form-data" method="POST" class="@screen max-md:text-center text-center ">
                 <div class="">
                   <label for="title" class="  font-bold">System:</label>
                   <br>
@@ -42,6 +42,7 @@
                     <option value="Tesla">Tesla</option>
                   </select>
                 </div>
+
                 <div class="">
                   <label for="phase" class=" font-bold">Phase:</label>
                   <br>
@@ -54,6 +55,8 @@
                     <option value="5">5</option>
                   </select>
                 </div>
+
+
                 <div class="">
                   <label for="lot" class=" font-bold">Lot:</label>
                   <br>
@@ -71,17 +74,22 @@
                     <option value="10">10</option>
                   </select>
                 </div>
+
                 <div class="mb-3">
                   <label for="notes" class=" font-bold ">Notes:</label>
                   <div><textarea class="bg-slate-200 text-black w-64" id="notes" name="notes"></textarea></div>
-                  
                 </div>
-                <div class="mb-3">
-                  <label for="imgUpload" class=" font-bold text-center">Image:</label>
-                  <div class="">
-                    <input type="file" class="ml-20 md:ml-0" id="imageUpload" name="file" >
-                  </div>
+
+                <div class=" ">
+                  <label for="imgUpload" class=" font-bold ">Image:</label>
                 </div>
+
+                <div class="mb-3 ">
+                  <input type="file" class=" ml-20 cursor-pointer hover:cursor-pointer inline-block" id="imageUpload" name="file" >
+                </div>
+
+
+
                 <button type="submit" class="bg-green-400 w-64 h-12 rounded hover:bg-green-500" value="Upload">Submit</button>
               </form>
             
