@@ -111,43 +111,32 @@
             </div>
             <!-- text - end -->
         
-            <div class=" ">
-              <!-- product - start -->
-              <div class=" ">
-                <ul class="flex justify-around flex-wrap  ">
-                  <% for(var i=0; i < 3; i++) {%>
+            
+            <div class="">
+              <ul class="flex justify-around flex-wrap">
+                <% const sortedPosts = posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3); %>
+                <% if (sortedPosts.length > 0) { %>
+                  <% sortedPosts.forEach(post => { %>
                     <li class="shadow-2xl">
-                      <a href="/post/<%= posts[i]._id%>" class="group h-60 w-60 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
-                        <img src="<%= posts[i].image%>" loading="lazy" alt="" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />                                 
+                      <a href="/post/<%= post._id %>" class="group h-60 w-60 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
+                        <img src="<%= post.image %>" loading="lazy" alt="" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />                                 
                       </a>
                     </li>
-                  <% } %>
-                </ul>
-              </div>
-              <!-- product - end -->
+                  <% }); %>
+                <% } else { %>
+                  <p>No posts available.</p>
+                <% } %>
+              </ul>
             </div>
+            
+
+             
+            
 
           </div>
         </div>
 
       
-        
-
-
-        <!-- <div class="col-6">
-          <ul class="row list-unstyled">
-          <% for(var i=0; i<posts.length; i++) {%>
-            <li class="col-6 justify-content-between mt-5">
-              <a href="/post/<%= posts[i]._id%>">
-                <img class="img-fluid" src="<%= posts[i].image%>">
-              </a>
-            </li>
-          <% } %>
-          </ul>
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/feed">All Post</a>
-          </div>  
-        </div>   -->
 
 
 
