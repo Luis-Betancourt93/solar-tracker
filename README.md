@@ -17,5 +17,6 @@
 
 # Run
 
-`"npm start"  to start application`
+`"npm start"  to start application, On the browser type in 'localhost:2121`
 ` "npm run dev"  to start tailwind`
+` "Control + c"  to quit the application`
