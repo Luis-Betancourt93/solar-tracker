@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "npx tailwindcss -i ./public/css/style.css -o ./public/dist/output.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "echo hello"
   },
   "author": "",
   "license": "MIT",
